@@ -1,5 +1,102 @@
-$body: red;
+// Colors
+$white: #ffffff;
+$grey: #e5e5e5;
+$dark-grey: #212529;
+$black: #000000;
+$yellow: #fca311;
+$light-blue: #238dc1;
+$blue: #003057;
+$dark-blue: #001c38;
+$darkest-blue: #001224;
 
+// Generales
+$max-width: 1200px;
+
+// ALL
 body {
-    background-color: $body;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: $grey;
+  margin: 0;
+  padding: 0;
+  a {
+    text-decoration: none;
+    color: $dark-grey;
+  }
+}
+
+.maxWidth {
+  width: 100%;
+  max-width: $max-width;
+}
+
+// Header
+
+.header {
+  h1 {
+    position: fixed;
+    margin-top: -999px; //Esto esta asi a proposito, es para indexar el h1 pero que no aparesca fisicamente.
+    color: rgba(0,0,0,0);
+  }
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    background-color: $white;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+    .logoContainerDiv{
+      @extend .maxWidth;
+      text-align: center;
+      a {
+        img {
+          padding: 12px 0px;
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+
+.stickyContainer {
+  position: sticky;
+  top: 0px;
+  box-shadow: 0px 0px 1px black;
+  .hNavContainer {
+    display: flex;
+    justify-content: center;
+    background-color: $white;
+    .hNav {
+      @extend .maxWidth;
+      ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 0;
+      list-style-type: none;
+      }
+      li {
+        padding: 12px 15px;
+      }
+    }
+  }
+}
+
+
+// Main & Sections
+main {
+  display: flex;
+  justify-content: center;
+  section {
+    @extend .maxWidth;
+  }
+}
+
+// Footer
+.copyright {
+  display: flex;
+  justify-content: center;
+  color: $white;
+  background-color: $dark-grey;
+  p {
+    @extend .maxWidth;
+    text-align: center;
+  }
 }
