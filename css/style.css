@@ -314,11 +314,11 @@ main {
         background-color: #fca311;
         padding: 25px;
         font-size: 18px;
-        font-weight: bold; }
+        font-weight: bold;
+        color: #212529; }
         .menuMobile .menuMobileContainer .hbNav a:active {
           color: #ffffff; }
 
-/* Escritorio */
 @media only screen and (max-width: 1200px) {
   main .section {
     width: 90%; }
@@ -392,6 +392,8 @@ main {
     font-size: 20px; }
   main .section .sectionTitle a {
     margin-left: 10px; }
+  main .section .cardGroup .card {
+    margin: 10px 0; }
   .header .logoContainer .logoContainerDiv img {
     height: 70px; }
   .formSection {
