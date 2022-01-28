@@ -6,11 +6,15 @@
     color: $black;
     opacity: 0;
   }
+  
   .logoContainer {
     display: flex;
     justify-content: center;
     background-color: $white;
     box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+    .hMenu {
+      display: none;
+    }
     .logoContainerDiv{
       @extend .maxWidth;
       text-align: center;
